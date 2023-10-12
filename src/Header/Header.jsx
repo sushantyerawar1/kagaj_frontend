@@ -38,6 +38,7 @@ const Header = () => {
     const path = window.location.pathname;
 
     const email = user?.emailId;
+    const isAdmin = user?.isAdmin;
 
     const logoutHandler = () => {
         localStorage.removeItem("userInfo");
@@ -90,7 +91,7 @@ const Header = () => {
                             ) : null
                         }
                         {
-                            (user && email == "akshay@gmail.com") ? (
+                            (user && isAdmin) ? (
                                 <Box as="a" href={'/search_by_user'}
                                     _hover={{
                                         color: "white",
@@ -105,7 +106,7 @@ const Header = () => {
                             ) : null
                         }
                         {
-                            (user && email != "akshay@gmail.com") ? (
+                            (user && !isAdmin) ? (
                                 <Box as="a" href={'/issue'}
                                     _hover={{
                                         color: "white",
