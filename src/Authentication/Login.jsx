@@ -76,7 +76,7 @@ const Login = () => {
             };
 
             const { data } = await axios.post(
-                "http://localhost:5000/api/auth/login",
+                "https://kagaj-backend-6p7z.onrender.com/api/auth/login",
                 {
                     "emailId": email,
                     "password": password,
@@ -130,7 +130,7 @@ const Login = () => {
             };
 
             const { data } = await axios.post(
-                "http://localhost:5000/api/auth/forgot-password",
+                "https://kagaj-backend-6p7z.onrender.com/api/auth/forgot-password",
                 {
                     "emailId": forgotemail,
                 },

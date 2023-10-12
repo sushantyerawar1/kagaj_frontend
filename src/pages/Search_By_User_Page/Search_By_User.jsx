@@ -83,7 +83,7 @@ const SearchByUser = () => {
 
 
                 const Data = await axios.post(
-                    "http://localhost:5000/api/issue/getallbyemail", {
+                    "https://kagaj-backend-6p7z.onrender.com/api/issue/getallbyemail", {
                     emailid: search
                 },
                     config
